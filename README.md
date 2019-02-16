@@ -2,7 +2,8 @@
 
 #### The scripts included in this repository are:
 #### CodeBook.md
-In this script you can find the description of the variables, the data, and any transformations or work that was performed to clean up the data.
+In this script you can find an introduction of the proyect and the link to the original data, all the transformationes performed to the data, the data and the variables that form it.
+description of the variables, the data, and any transformations or work that was performed to clean up the data.
 #### run_analysis.R
 It contains all the code to perform the analyses described in the 5 steps of the assigment. It can be launched in RStudio.
 #### tidy_data.txt
