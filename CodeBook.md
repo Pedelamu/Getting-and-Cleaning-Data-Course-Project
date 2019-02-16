@@ -124,3 +124,4 @@ The complete list of variables of each feature vector is the next:
 "fbodybodygyromagstd"     
 "fbodybodygyrojerkmagmean"
 "fbodybodygyrojerkmagstd" 
+
