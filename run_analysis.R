@@ -10,16 +10,16 @@
 
 ## For test data
 
-subject_test <- read.table("./UCI HAR Dataset/test/subject_test.txt")
-Y_test <- read.table("./UCI HAR Dataset/test/Y_test.txt")
-X_test <- read.table("./UCI HAR Dataset/test/X_test.txt")
+subject_test <- read.table("./test/subject_test.txt")
+Y_test <- read.table("./test/Y_test.txt")
+X_test <- read.table("./test/X_test.txt")
 testData <- cbind(subject_test, Y_test, X_test)
 
 ## For train data
 
-subject_train <- read.table("./UCI HAR Dataset/train/subject_train.txt")
-Y_train <- read.table("./UCI HAR Dataset/train/Y_train.txt")
-X_train <- read.table("./UCI HAR Dataset/train/X_train.txt")
+subject_train <- read.table("./train/subject_train.txt")
+Y_train <- read.table("./train/Y_train.txt")
+X_train <- read.table("./train/X_train.txt")
 trainData <- cbind(subject_train, Y_train, X_train)
 
 ## When I have the two groups of data (train & test) ready then I
@@ -35,7 +35,7 @@ data <- rbind(trainData, testData)
 ## names of my data set´s variables, keeping the first two variables
 ## for subject and activity.
 
-features <- read.table("./UCI HAR Dataset/features.txt")
+features <- read.table("./features.txt")
 features <- as.character(features$V2)
 newnames <- c("subject", "activity", features)
 names(data) = newnames
@@ -55,7 +55,7 @@ data <- data[, c("subject", "activity", names_mean_std)]
 ## rename the content of the activity´s variable according to the data.
 ## I also convert the content to lowercase to clarify the data.
 
-activities <- read.table("./UCI HAR Dataset/activity_labels.txt")
+activities <- read.table("./activity_labels.txt")
 activities <- tolower(as.character(activities$V2))
 data$activity <- activities[data$activity]
 
