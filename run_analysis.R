@@ -31,8 +31,8 @@ data <- rbind(trainData, testData)
 ## Extracts only the measurements on the mean and standard deviation
 ## for each measurement.
 
-## For this step, I read the feature�s file and use it to change the
-## names of my data set�s variables, keeping the first two variables
+## For this step, I read the feature´s file and use it to change the
+## names of my data set´s variables, keeping the first two variables
 ## for subject and activity.
 
 features <- read.table("./features.txt")
@@ -42,7 +42,9 @@ names(data) = newnames
 
 ## Then, I use de grep function to select only those variables that
 ## contain "mean()" or "std()", and I subset only those variables
-## in my data set.
+## in my data set. As meanFreq is defined as Weighted average of the
+## frequency components to obtain a mean frequency so I think I 
+## shouldn´t add it.
 
 names_mean_std <- features[grep("(mean|std)\\(\\)", features)]
 data <- data[, c("subject", "activity", names_mean_std)]
@@ -51,20 +53,20 @@ data <- data[, c("subject", "activity", names_mean_std)]
 ## Uses descriptive activity names to name the activities in the 
 ## data set
 
-## For this step I read the acivity_labels�s file and use it to
-## rename the content of the activity�s variable according to the data.
+## For this step I read the acivity_labels´s file and use it to
+## rename the content of the activity´s variable according to the data.
 ## I also convert the content to lowercase to clarify the data.
 
 activities <- read.table("./activity_labels.txt")
 activities <- tolower(as.character(activities$V2))
 data$activity <- activities[data$activity]
 
-## Step 3.
+## Step 4.
 ## Appropriately labels the data set with descriptive variable names.
 
-## For this step I convert the variables�s names leaving only the 
+## For this step I convert the variables´s names leaving only the 
 ## alpha numeric characters and converting them to lowercase as the
-## tidy data�s rules say with the gsub function.
+## tidy data´s rules say with the gsub function.
 
 appropiatenames <- tolower(gsub("[[:punct:]]", "", names(data)))
 names(data) <- appropiatenames
