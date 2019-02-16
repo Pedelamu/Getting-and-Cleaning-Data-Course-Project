@@ -1,5 +1,5 @@
 # Code Book
-#### Transformations
+### Transformations
 The script run_analysis.R performs the 5 steps described in the course project's definition.
 
 1. Merges the training and the test sets to create one data set.
@@ -15,7 +15,7 @@ The script run_analysis.R performs the 5 steps described in the course project's
 1. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
     * For the last step and after call the dplyr package, I group the data (group_by) set by subject and activity to then get the average of each, activity and subject, with the sumarise_all function.
 
-#### Variables
+### Data
 The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (**prefix 't' to denote time**) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz.  
 
 Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (**Note the 'f' to indicate frequency domain signals**). 
@@ -54,8 +54,7 @@ tBodyAccJerkMean
 tBodyGyroMean
 tBodyGyroJerkMean
 
-The complete list of variables of each feature vector is the next:
-
+### Variables
 "activity"                 
 "subject"                 
 "tbodyaccmeanx"         
@@ -117,7 +116,7 @@ The complete list of variables of each feature vector is the next:
 "fbodygyrostdy"           
 "fbodygyrostdz"           
 "fbodyaccmagmean"         
-"fbodyaccmagstd"          
+"fbodyaccmagstd"
 "fbodybodyaccjerkmagmean" 
 "fbodybodyaccjerkmagstd"  
 "fbodybodygyromagmean"    
