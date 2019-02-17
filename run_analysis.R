@@ -44,7 +44,7 @@ names(data) = newnames
 ## contain "mean()" or "std()", and I subset only those variables
 ## in my data set. As meanFreq is defined as Weighted average of the
 ## frequency components to obtain a mean frequency so I think I 
-## shouldn´t add it.
+## shouldn´t add them as variables.
 
 names_mean_std <- features[grep("(mean|std)\\(\\)", features)]
 data <- data[, c("subject", "activity", names_mean_std)]
