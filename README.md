@@ -6,10 +6,10 @@ In this script you can find an introduction of the proyect and the link to the o
 description of the variables, the data, and any transformations or work that was performed to clean up the data.
 
 #### Important:   
-##### As meanFreq is defined as Weighted average of the frequency components to obtain a mean frequency so I think I shouldn´t add them as variables.
-##### Note the prefix 't' to denote time.
-##### Note the prefix 'f' to indicate frequency domain signals.
-##### I convert the variables´s names leaving only the **alpha numeric characters** and converting them to **lowercase** as the tidy data´s rules say
+* As meanFreq is defined as Weighted average of the frequency components to obtain a mean frequency so I think I shouldn´t add them as variables.
+* Note the prefix 't' to denote time.
+* Note the prefix 'f' to indicate frequency domain signals.
+* I convert the variables´s names leaving only the **alpha numeric characters** and converting them to **lowercase** as the tidy data´s rules say
     
 ### tidy_data.txt
 It is the output of the 5th step is called averages_data.txt, and uploaded in the course project's form. It can be read into R with read.table(header=TRUE) 
